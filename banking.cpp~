@@ -1,0 +1,66 @@
+#include <iostream>
+using namespace std;
+
+void OpenAnAccount(){
+  cout<<"An account is opened"<<endl;
+}
+void BalanceEnquiry(){
+  cout<<"Here is your balance: "<<endl;
+}
+void Deposit(){
+  cout<<"Here is your deposit: "<<endl;
+}
+void Withdrawl(){
+  cout<<"Here is your withdrwal: "<<endl;
+}
+void CloseAnAccount(){
+  cout<<"Your account has been closed."<<endl;
+}
+void ShowAllAccounts(){
+  cout<<"Here is all the accounts"<<endl;
+}
+
+
+int manin(){
+  int option;
+  bool state = true;
+  cout<<"***Banking System***<<endl;
+  cout<<"       Select one option below"<<endl;
+  cout<<"       1 Open an Account"<<endl;
+  cout<<"       2 Balance Enquiry"<<endl;
+  cout<<"       3 Deposit"<<endl;
+  cout<<"       4 Withdrawl"<<endl;
+  cout<<"       5 Close an Account"<<endl;
+  cout<<"       6 Show All Accounts"<<endl;
+  cout<<"       7 Quit"<<endl;
+  cout<<"Enter your Choice:";
+  cin<<option;
+  while (state){
+  switch(option)
+    {case 1:
+	OpenAnAccount();
+	break;
+    case 2:
+      BalanceEnquiry();
+      break;
+    case 3:
+      Deposit();
+      break;
+    case  4:
+      Withdrawl();
+      break;
+    case 5:
+      CloseAnAccount();
+      break;
+    case 6:
+      ShowAllAccounts();
+      break;
+    case 7:
+      state = false;
+      break;
+    default:
+      cout<<"Enter a right choice"<<endl;
+    }
+  }
+  return 0;
+}
